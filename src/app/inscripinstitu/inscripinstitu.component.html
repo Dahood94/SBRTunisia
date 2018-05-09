@@ -1,0 +1,103 @@
+
+<form [formGroup]="articleForm"  style="border:0px solid " class="col-md-12">
+    <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-2"> </div>
+              <div class="col-md-8">
+        <h1 class="color">Enregistrez-vous</h1>
+        <p class="color" >Merci de remplir ce formulaire pour créer un compte.</p>
+        <hr>
+        <label for="nom" class="color" ><b>Nom </b></label>
+  
+        <div class="font">
+        <input type="text" placeholder="Entrer le nom" formControlName="nom"> 
+        <label *ngIf="articleForm.get('nom').invalid && processValidation"  class="red"> * le nom de l'institution est obligatoire </label>
+        <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+      </div>
+        
+      <label for="email" class="color" ><b>Email</b></label>
+       
+      <div class="font">
+         <input type="text" placeholder="Enter Email" formControlName="mailR">
+         <label *ngIf="articleForm.get('mailR').invalid && processValidation"  class="red"> * L'adresse mail est obligatoire </label>
+                <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+        </div>
+  
+       <div class=".col-xs-12 .col-md-8" style="border:0px solid">
+        <label for="Adress" class="color" ><b>Adresse</b></label>
+        <div class="font">
+        <input type="text" placeholder="Entrer votre adresse " formControlName="adresse"> 
+        <label *ngIf="articleForm.get('adresse').invalid && processValidation"  class="red"> * L'adresse' est obligatoire </label>        
+        <i class="glyphicon glyphicon-home" aria-hidden="true"></i></div>
+      </div>
+  
+       <b><label for="MatFiscale" class="color" ><b> Matricule Fiscale </b></label></b>
+       <div class="font">
+         <input type="text" placeholder="Entrer votre Matricule fiscale" formControlName="matFiscR">
+         <label *ngIf="articleForm.get('matFiscR').invalid && processValidation"  class="red"> * La mat fisc est obligatoire </label>
+         <i class="fa fa-address-card" aria-hidden="true"></i>
+       </div>
+        <b><label for="email" class="color" ><b>Nom Président Directeur Génerale (PDG) </b></label></b>
+        <div class="font">
+          <input type="text" placeholder="Entrer le nom" formControlName="nomAdminC">
+          <label *ngIf="articleForm.get('nomAdminC').invalid && processValidation"  class="red"> *Le nom complet de l'Admin est obligatoire </label>
+          
+          <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="N°tel" class="color" ><b> N°Tèléphone </b></label>
+                <div class="font">
+                <input type="text" placeholder=" Entrer N°Tèl" formControlName="tel1">
+                <label *ngIf="articleForm.get('tel1').invalid && processValidation"  class="red"> * Le numéro téléphone est obligatoire </label>
+          
+                <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></div></div>
+        <div class="col-md-6">
+        <label for="N°tel" class="color" ><b> N°Tèléphone </b></label>
+        <div class="font">
+        <input type="text" placeholder=" Entrer N°Tèl" formControlName="tel2">
+        <label *ngIf="articleForm.get('tel2').invalid && processValidation"  class="red"> * Le deuxième numéro n'est pas obligatoire </label>
+          
+        <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></div></div>
+  <div class="col-md-0.5"></div>
+  <div class="col-md-6">
+        <label for="N°fax" class="color" ><b> N°Fax </b></label>
+        <div class="font">
+        <input type="text" placeholder="Entrer N°Fax" formControlName="fax">
+        <label *ngIf="articleForm.get('fax').invalid && processValidation"  class="red"> * Le numéro fax aussi n'est pas obligatoire </label>
+          
+        <i class="glyphicon glyphicon-phone-alt" value="+216" aria-hidden="true"></i>
+      </div></div>
+    </div>
+           
+    <div>
+    <label for="psw" class="color" ><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <label for="psw-repeat" class="color" ><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+    
+        <p class="color" >En créant un compte, vous acceptez notre
+            <a href="#" style="color:dodgerblue">Conditions et confidentialité
+              </a></p>
+    
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Annuler</button>
+          <a href="/dashbored1"><button type="submit" class="signupbtn">Envoyer</button></a>
+          <button  (click)="onInstitutionFinFormSubmit();">HELLO</button>
+        </div>
+      </div>
+      </div>
+    </div> 
+    </div>
+  
+       <label><a href="/dashbored">dashbored</a></label>
+       <label><a href="/dashbored1">dashbored1</a></label>
+  
+  </form>
+  
+  
+  
+  
+  

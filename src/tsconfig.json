@@ -14,5 +14,9 @@
     "typeRoots": [
       "../node_modules/@types"
     ]
-  }
+  },
+  "include": [
+    "C:/Users/Haythem/Desktop/STAGE PFE/Frontend App/pfe/src/Model/",
+    "C:/Users/Haythem/Desktop/STAGE PFE/Frontend App/pfe/src/"
+  ]
 }

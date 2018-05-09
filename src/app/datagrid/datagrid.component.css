@@ -1,0 +1,62 @@
+.table > thead > tr > th {
+    vertical-align: middle;
+}
+
+.margin-bottom-basic {
+    margin-bottom: 15px;
+
+}
+
+.pagination {
+    margin: 0;
+}
+
+.items-per-page {
+    margin-left: 15px;
+}
+
+.sortable:after {
+    font: 14px/1 FontAwesome;
+    content: "\f0dc";
+}
+
+.sortable.sort-ascent:after {
+    content: '\f0de';
+    vertical-align: bottom;
+}
+
+.sortable.sort-descent:after {
+    content: "\f0dd";
+    vertical-align: top;
+}
+.form-group{
+
+    margin-right: 10%;
+    position: relative;
+}
+.body{
+    margin-right: 15%;
+}
+.row {
+    margin-right: 3%;
+}
+.text-right{ 
+    margin-right: 3%;
+}
+.btn-default{
+    margin-right: 10px;
+}
+.container{
+    margin-right: 20%;
+    margin-left: 0.5%;
+    margin-top: 10%;
+    padding-right: 4%;
+    padding-right: 1%
+
+}
+.text-right{
+    padding-right: 5%;
+}
+.row{
+    padding-right:4%;
+}

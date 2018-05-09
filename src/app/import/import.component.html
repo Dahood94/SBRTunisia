@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Veuillez insérer la designation de votre fichier" formControlName="Designation">
+      <label for="name">Date upload</label>
+      <input type="date" class="form-control" formControlName="dateupload">
+    </div>
+    <div class="form-group">
+      <label for="avatar">Avatar</label>
+      <input type="file" id="avatar" (change)="selectFile($event)" (change)="onFileChange($event)" formControlName="avatar" #fileInput>
+      <button type="button" class="btn btn-sm btn-default" (click)="clearFile()">clear file</button>
+    </div>
+    <button type="submit" (click)="onSubmit()" (click)="upload()" (click)="vider()" [disabled]="form.invalid || loading"  class="btn btn-success">Submit <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+  </form>

@@ -1,0 +1,151 @@
+<app-navbar></app-navbar>
+  
+  <!-- page content -->
+  <div class="right_col" role="main">
+      <div class="row">
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+          <button type="button" class="btn btn-secondary active" id="switchActif">Configurer</button>
+<button type="button" class="btn btn-secondary disabled"> Enregistrer </button>
+</div>
+          </div>
+      <div  id="groupe" disabled="disabled">
+      <label for="email" class="color" ><b>Nom Entreprise</b></label>
+
+      <div class="font">
+      <input type="text" placeholder="Entrer le nom" name="NomE" required> 
+      <i class="glyphicon glyphicon-user" aria-hidden="true" disabled></i>
+    </div>
+      
+    <label for="email" class="color" ><b>Email</b></label>
+     
+    <div class="font">
+       <input type="text" placeholder="Enter Email" name="email" required  >
+      <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+      </div>
+
+     <div class=".col-xs-12 .col-md-8" style="border:0px solid">
+      <label for="Adress" class="color" ><b>Adresse</b></label>
+      <div class="font">
+      <input type="text" placeholder="Entrer votre adresse " name="Adresse" required> 
+      <i class="glyphicon glyphicon-home" aria-hidden="true"></i></div>
+    </div>
+<div class="row">
+    <div class="dropdown" class="col-md-4">
+          <label for="GV" class="color"><b>Gouvernorat</b></label>
+        <select id="itemsOnPageSelect2" class="form-control input-sm">
+            
+    <option>Ariana</option>
+    <option>Béja</option>
+    <option>Ben Arous</option>
+    <option>Bizert</option>
+    <option>Gabès</option>
+    <option>Gafsa</option>
+    <option>Jendouba</option>
+    <option>Kairouan</option>
+    <option>Kasserine</option>
+    <option>Kébili</option>
+    <option>Le Kef</option>
+    <option>Mahdia</option>
+    <option>Le Manouba</option>
+    <option>Médenine</option>
+    <option>Monastir</option>
+    <option>Nabeul</option>
+    <option>Sfax</option>
+    <option>Sidi Bouzid</option>
+    <option>Siliana</option>
+    <option>Sousse</option>
+    <option>Tataouine</option>
+    <option>Tozeur</option>
+    <option>Tunis</option>
+    <option>Zaghouen</option>      
+</select>
+        </div>
+
+        <div class="dropdown" class="col-md-4">
+          <label for="email" class="color" ><b>Forme Juriqique </b></label>
+    <select id="itemsOnPageSelect2" class="form-control input-sm">
+       
+        <option>SA</option>
+        <option>SARL</option>
+        <option>SUARL</option>
+        <option>Entreprise individuelle</option>
+        <option>Commandite par actions </option>
+
+        </select>
+        </div>
+        <div class="dropdown" class="col-md-4">
+          <label for="email" class="color" ><b>Taille </b></label>
+    <select id="itemsOnPageSelect2" class="form-control input-sm">
+        
+        
+        <option>Grande Entreprise ( GE ) </option>
+        <option>Petite et Moyenne Entreprise ( PME )</option>
+        <option>Trés Petite Entreprise ( TPE ) </option>
+        </select>
+        </div>
+     </div>
+     <div class="row">
+        <div class="dropdown" class="col-md-4">
+            <label for="email" class="color" ><b> Secteur </b></label>
+      <select id="itemsOnPageSelect2" class="form-control input-sm">
+          <option> Agroalimentaire</option>
+          <option> Assurance </option>
+          <option> Construction et Batiment </option>
+          <option> Communication et multimédia </option>
+          <option> Etude et conseil </option>
+          <option> Informatique </option>
+          <option> Services aux Entreprises</option>
+          <option> Industrie </option>
+          <option> Textile  </option>
+          <option> Transport / Logistique </option>
+          <option> Autres ... </option>
+          
+          </select>
+          </div>
+         <div class="col-md-4">
+            <label for="email" class="color" ><b> Date de Création </b></label>
+<p></p>
+            <input type="date" name="dateofbirth" id="dateofbirth">
+         </div>
+     </div>
+     <b><label for="MatFiscale" class="color" ><b> Matricule Fiscale </b></label></b>
+     <div class="font">
+       <input type="text" placeholder="Entrer votre Matricule fiscale" name="Matfisc" required> 
+       <i class="fa fa-address-card" aria-hidden="true"></i>
+     </div>
+      <b><label for="email" class="color" ><b>Nom Président Directeur Génerale (PDG) </b></label></b>
+      <div class="font">
+        <input type="text" placeholder="Entrer le nom" name="PDG" required> 
+        <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+      </div>
+      <div class="row">
+      <div class="col-md-6">
+      <label for="N°tel" class="color" ><b> N°Tèléphone Mobile </b></label>
+      <div class="font">
+      <input type="text" placeholder=" Entrer N°Tèl" name="N°tèl" required>
+      <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></div></div>
+<div class="col-md-0.5"></div>
+<div class="col-md-6">
+      <label for="N°fax" class="color" ><b> N°Fax </b></label>
+      <div class="font">
+      <input type="text" placeholder="Entrer N°Fax" name="fax" required>
+      <i class="glyphicon glyphicon-phone-alt" value="+216" aria-hidden="true"></i>
+    </div></div>
+  </div>
+         
+  <div>
+  <label for="psw" class="color" ><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <label for="psw-repeat" class="color" ><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+    </div>
+    </div>
+          <!-- /page content -->
+  
+          <!-- footer content -->
+          
+          <!-- /footer content -->
+      

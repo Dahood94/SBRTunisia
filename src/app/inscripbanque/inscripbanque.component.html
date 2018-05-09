@@ -1,0 +1,164 @@
+<form [formGroup]="articleForm"  style="border:0px solid " class="col-md-12">
+  <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"> </div>
+            <div class="col-md-8">
+      <h1 class="color">Enregistrez-vous</h1>
+      <p class="color" >Merci de remplir ce formulaire pour créer un compte.</p>
+      <hr>
+      <label for="nomB" class="color" ><b>Nom Banque</b></label>
+
+      <div class="font">
+      <input type="text" placeholder="Entrer le nom" formControlName="nomB">
+      <label *ngIf="articleForm.get('nomB').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+       
+      <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+    </div>
+      
+    <label for="email" class="color" ><b>Email</b></label>
+     
+    <div class="font">
+       <input type="text" placeholder="Enter Email" formControlName="email"  >
+       <label *ngIf="articleForm.get('email').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+      
+      <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+      </div>
+
+     <div class=".col-xs-12 .col-md-8" style="border:0px solid">
+      <label for="adresse" class="color" ><b>Adresse</b></label>
+      <div class="font">
+      <input type="text" placeholder="Entrer votre adresse " formControlName="adresse"> 
+
+      <label *ngIf="articleForm.get('adresse').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+      
+      <i class="glyphicon glyphicon-home" aria-hidden="true"></i></div>
+    </div>
+<div class="row">
+    <div class="dropdown" class="col-md-4">
+          <label for="region" class="color"><b>Gouvernorat</b></label>
+        <select id="itemsOnPageSelect2" class="form-control input-sm" formControlName="region">
+            
+    <option>Ariana</option>
+    <option>Béja</option>
+    <option>Ben Arous</option>
+    <option>Bizert</option>
+    <option>Gabès</option>
+    <option>Gafsa</option>
+    <option>Jendouba</option>
+    <option>Kairouan</option>
+    <option>Kasserine</option>
+    <option>Kébili</option>
+    <option>Le Kef</option>
+    <option>Mahdia</option>
+    <option>Le Manouba</option>
+    <option>Médenine</option>
+    <option>Monastir</option>
+    <option>Nabeul</option>
+    <option>Sfax</option>
+    <option>Sidi Bouzid</option>
+    <option>Siliana</option>
+    <option>Sousse</option>
+    <option>Tataouine</option>
+    <option>Tozeur</option>
+    <option>Tunis</option>
+    <option>Zaghouen</option>      
+</select>
+<label *ngIf="articleForm.get('region').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+     
+        </div>
+
+             
+     </div>
+     <div class="row">
+        
+         <div class="col-md-4">
+            <label for="dateCreation" class="color" ><b> Date de Création </b></label>
+<p></p>
+            <input type="date" name="CreationDate" id="dateofbirth" formControlName="dateCreation">
+
+<label *ngIf="articleForm.get('dateCreation').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+     
+         </div>
+     </div>
+     <b><label for="matFisc" class="color" ><b> Matricule Fiscale </b></label></b>
+     <div class="font">
+       <input type="text" placeholder="Entrer votre Matricule fiscale" name="Matfisc" formControlName="matFisc"> 
+       <label *ngIf="articleForm.get('matFisc').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+
+       <i class="fa fa-address-card" aria-hidden="true"></i>
+     </div>
+      <b><label for="nomAdminC" class="color" ><b>Nom Président Directeur Génerale (PDG) </b></label></b>
+      <div class="font">
+        <input type="text" placeholder="Entrer le nom" name="PDG" formControlName="nomAdminC"> 
+        <label *ngIf="articleForm.get('nomAdminC').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+
+        <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+      </div>
+      <div class="row">
+      <div class="col-md-6">
+      <label for="telephone" class="color" ><b> N°Tèléphone Mobile </b></label>
+      <div class="font">
+      <input type="text" placeholder=" Entrer N°Tèl" name="tel"  formControlName="telephone">
+      <label *ngIf="articleForm.get('telephone').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+
+      <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></div></div>
+<div class="col-md-0.5"></div>
+<div class="col-md-6">
+      <label for="telephonefixe" class="color" ><b> N°Fax </b></label>
+      <div class="font">
+      <input type="text" placeholder="Entrer N°Fax" name="fax" formControlName="telephonefixe">
+      <label *ngIf="articleForm.get('telephonefixe').invalid && processValidation" [ngClass] = "'error'" class="red"> * Votre numéro de téléphone est obligatoire. </label>
+
+      
+      <i class="glyphicon glyphicon-phone-alt" value="+216" aria-hidden="true"></i>
+    </div></div>
+  </div>
+         
+  <div>
+  <label for="psw" class="color" ><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      
+  
+      <label for="psw-repeat" class="color" ><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+ 
+      <div *ngIf="statusCode; else processing">
+        <div *ngIf="statusCode === 201" [ngClass] = "'success'">
+           Article added successfully.
+        </div>   
+        <div *ngIf="statusCode === 409" [ngClass] = "'success'">
+             Article already exists.
+        </div>   	
+        <div *ngIf="statusCode === 200" [ngClass] = "'success'">
+             Article updated successfully.
+        </div>   	      
+        <div *ngIf="statusCode === 204" [ngClass] = "'success'">
+             Article deleted successfully.
+        </div>   	   
+        <div *ngIf="statusCode === 500" [ngClass] = "'error'">
+             Internal Server Error.
+        </div>   	
+      </div>
+  
+      <p class="color" >En créant un compte, vous acceptez notre
+          <a href="#" style="color:dodgerblue">Conditions et confidentialité
+            </a></p>
+  
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Annuler</button>
+        <button type="submit" class="signupbtn">Envoyer</button>
+        <button (click)="onBanqueFormSubmit();">HELLO</button>
+      </div>
+    </div>
+    </div>
+  </div> 
+  </div>
+
+     <label><a href="/dashbored">dashbored</a></label>
+     <label><a href="/dashbored1">dashbored1</a></label>
+
+</form>
+
+
+
+

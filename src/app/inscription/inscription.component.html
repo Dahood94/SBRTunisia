@@ -1,0 +1,196 @@
+<form [formGroup]="articleForm"  style="border:0px solid " class="col-md-12">
+  <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"> </div>
+            <div class="col-md-8">
+      <h1 class="color">Enregistrez-vous</h1>
+      <p class="color" >Merci de remplir ce formulaire pour créer un compte.</p>
+      <hr>
+      <label for="NomE" class="color" ><b>Nom Entreprise</b></label>
+      
+      <div class="font">
+      <input type="text" placeholder="Entrer le nom" formControlName="nomE"> 
+      <label *ngIf="articleForm.get('nomE').invalid && processValidation"  class="red">* Nom d'entreprise obligatoire</label>
+      <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+    </div>
+      
+    <label for="email" class="color" ><b>Email</b></label>     
+    <div class="font">
+       <input type="text" placeholder="Enter Email" formControlName="email"  >
+       <label *ngIf="articleForm.get('email').invalid && processValidation"  class="red"> * L'adresse mail est obligatoire </label>
+       <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+      </div>
+
+     <div class=".col-xs-12 .col-md-8" style="border:0px solid">
+      <label for="Adress" class="color" ><b>Adresse</b></label>
+      <div class="font">
+      <input type="text" placeholder="Entrer votre adresse " formControlName="adresse"> 
+      <label *ngIf="articleForm.get('adresse').invalid && processValidation"  class="red"> * L'adresse de l'entreprise est obligatoire </label>
+       
+      <i class="glyphicon glyphicon-home" aria-hidden="true"></i></div>
+    </div>
+<div class="row">
+    <div class="dropdown" class="col-md-4">
+          <label for="GV" class="color"><b>Gouvernorat</b></label>
+        <select id="itemsOnPageSelect2" class="form-control input-sm" formControlName="region">
+            
+    <option>Ariana</option>
+    <option>Béja</option>
+    <option>Ben Arous</option>
+    <option>Bizert</option>
+    <option>Gabès</option>
+    <option>Gafsa</option>
+    <option>Jendouba</option>
+    <option>Kairouan</option>
+    <option>Kasserine</option>
+    <option>Kébili</option>
+    <option>Le Kef</option>
+    <option>Mahdia</option>
+    <option>Le Manouba</option>
+    <option>Médenine</option>
+    <option>Monastir</option>
+    <option>Nabeul</option>
+    <option>Sfax</option>
+    <option>Sidi Bouzid</option>
+    <option>Siliana</option>
+    <option>Sousse</option>
+    <option>Tataouine</option>
+    <option>Tozeur</option>
+    <option>Tunis</option>
+    <option>Zaghouen</option>      
+</select>
+
+<label *ngIf="articleForm.get('region').invalid && processValidation"  class="red"> * Region est obligatoire </label>
+       
+        </div>
+        <div class="dropdown" class="col-md-4">
+          <label for="Forme Juriqique" class="color" ><b>Forme Juriqique </b></label>
+    <select id="SelectFormeJuridique" class="form-control input-sm" formControlName="statutJuridique">
+       
+        <option>SA</option>
+        <option>SARL</option>
+        <option>SUARL</option>
+        <option>Entreprise individuelle</option>
+        <option>Commandite par actions </option>
+
+        </select>
+        </div>
+        <div class="dropdown" class="col-md-4">
+          <label for="email" class="color" ><b>Taille </b></label>
+    <select id="itemsOnPageSelect" class="form-control input-sm" formControlName="tailleEntreprise">
+        
+        
+        <option>Grande Entreprise ( GE ) </option>
+        <option>Petite et Moyenne Entreprise ( PME )</option>
+        <option>Trés Petite Entreprise ( TPE ) </option>
+        </select>
+        </div>
+       
+     </div>
+     <div class="row">
+        <div class="dropdown" class="col-md-4">
+            <label for="email" class="color" ><b> Secteur de travail </b></label>
+      <select id="itemsOnPageSelect1" class="form-control input-sm" formControlName="secteurTravail">
+          <option> Agroalimentaire</option>
+          <option> Assurance </option>
+          <option> Construction et Batiment </option>
+          <option> Communication et multimédia </option>
+          <option> Etude et conseil </option>
+          <option> Informatique </option>
+          <option> Services aux Entreprises</option>
+          <option> Industrie </option>
+          <option> Textile  </option>
+          <option> Transport / Logistique </option>
+          <option> Autres ... </option>
+          
+          </select>
+
+        <label *ngIf="articleForm.get('secteurTravail').invalid && processValidation"  class="red">* Votre secteur de travail est obligatoire </label>
+        
+          </div>
+
+         <div class="col-md-4">
+            <label for="email" class="color" ><b> Date de Création </b></label>
+<p></p>
+            <input type="date" name="CreationDate" id="dateofbirth" formControlName="dateCreation">
+            <label *ngIf="articleForm.get('dateCreation').invalid && processValidation"  class="red"> * La date de création est obligatoire </label>
+       
+         </div>
+     </div>
+     <b><label for="MatFiscale" class="color" ><b> Matricule Fiscale </b></label></b>
+     <div class="font">
+       <input type="text" placeholder="Entrer votre Matricule fiscale" name="Matfisc" formControlName="matFisc">
+       <label *ngIf="articleForm.get('matFisc').invalid && processValidation"  class="red"> * La date de création est obligatoire </label>
+        
+       <i class="fa fa-address-card" aria-hidden="true"></i>
+     </div>
+      <b><label for="email" class="color" ><b>Nom Président Directeur Génerale (PDG) </b></label></b>
+      <div class="font">
+        <input type="text" placeholder="Entrer le nom" name="PDG" formControlName="nomAdminC">
+        <label *ngIf="articleForm.get('nomAdminC').invalid && processValidation"  class="red"> * Nom du PDG est obligatoire </label>
+        
+        <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+      </div>
+      <div class="row">
+      <div class="col-md-6">
+      <label for="N°tel" class="color" ><b> N°Tèléphone Mobile </b></label>
+      <div class="font">
+      <input type="text" placeholder=" Entrer N°Tèl" name="tel"  formControlName="telephone">
+      <label *ngIf="articleForm.get('telephone').invalid && processValidation"  class="red"> * Votre numéro de téléphone est obligatoire. </label>
+       
+      <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></div></div>
+<div class="col-md-0.5"></div>
+<div class="col-md-6">
+      <label for="N°fax" class="color" ><b> N°Fax </b></label>
+      <div class="font">
+      <input type="text" placeholder="Entrer N°Fax" name="fax" formControlName="telephonefixe">
+      <i class="glyphicon glyphicon-phone-alt" value="+216" aria-hidden="true"></i>
+    </div></div>
+  </div>
+         
+  <div>
+  <label for="psw" class="color" ><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <label for="psw-repeat" class="color" ><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+  
+  
+      <p class="color" >En créant un compte, vous acceptez notre
+          <a href="#" style="color:dodgerblue">Conditions et confidentialité
+            </a></p>
+            <div *ngIf="statusCode; else processing">
+              <div *ngIf="statusCode === 201" [ngClass] = "'success'">
+                 Votre demande été envoyée avec succèes.
+              </div>   
+              <div *ngIf="statusCode === 409" [ngClass] = "'success'">
+                   Vous avez déjà un compte.
+              </div>   	
+              <div *ngIf="statusCode === 200" [ngClass] = "'success'">
+                   Article updated successfully.
+              </div>   	      
+              <div *ngIf="statusCode === 204" [ngClass] = "'success'">
+                   Article deleted successfully.
+              </div>   	   
+              <div *ngIf="statusCode === 500" >
+                   Internal Server Error.
+              </div>   	
+            </div>
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Annuler</button>
+        <button type="submit" class="signupbtn">Envoyer</button>
+        <button  (click)="onEntrepriseFormSubmit();">HELLO</button>
+      </div>
+    </div>
+    </div>
+  </div> 
+  </div>
+
+     <label><a href="/dashbored">dashbored</a></label>
+     <label><a href="/dashbored1">dashbored1</a></label>
+
+</form>
+
+
+
+

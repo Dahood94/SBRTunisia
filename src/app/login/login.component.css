@@ -1,0 +1,42 @@
+
+.card-login {
+    max-width:100px;
+  }
+  .card-header{
+      margin-bottom: 20px;
+      font-family: Georgia, serif;
+      font-size: 30px;
+      text-align: center;
+     color: white;
+      
+  }
+  .card-register {
+    max-width: 40rem;
+  }
+  .row{
+      margin-top: 180px;
+     margin-bottom: 300px;
+     
+  }
+  .col-md-12{
+       
+       background-size: cover;
+       background-attachment:scroll;
+       background-repeat: no-repeat;
+       background-image: url("/assets/backgroundapp.JPG")
+       }
+  .img-rounded{
+      background-color: coral;
+  }
+.img-responsive{
+    max-width: 200px;
+    display: block;
+    margin-left: 25%;
+    margin-top: 20%;
+    margin-right: 20%;
+    margin-bottom: 10%;
+}
+  .color{
+      color: whitesmoke;
+  }
+ 

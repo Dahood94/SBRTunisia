@@ -1,0 +1,104 @@
+
+<app-navbar></app-navbar>
+
+<!-- page content --> 
+<div class="right_col" role="main">
+        <app-import></app-import>
+  <hr>
+  <div class="row">
+    
+    
+      <div class="row">
+          
+         
+                <br>
+                <br>
+                <br>
+                <br>
+          <div class="col-md-12">
+              <div grid-data id='test' grid-options="gridOptions" grid-actions="gridActions">
+                  <div class="row">
+                      <div class="col-md-3">
+                          <span class="items"><button (click)="chargerFichier();" (click)="ngOnInit();">Tout les Documents</button></span>
+                      </div>
+                      <div class="col-md-9 text-right">
+                          <form class="form-inline pull-right margin-bottom-basic">
+                              <div class="form-group">
+                                  <grid-pagination max-size="5"
+                                                   boundary-links="true"
+                                                   class="pagination-sm"
+                                                   total-items="paginationOptions.totalItems"
+                                                   ng-model="paginationOptions.currentPage"
+                                                   ng-change="reloadGrid()"
+                                                   items-per-page="paginationOptions.itemsPerPage"></grid-pagination>
+                              </div>
+                              
+                          </form>
+                      </div>
+                  </div>
+                  <br>
+                  <br>
+                  <table class="table table-bordered table-striped">
+                      <thead>
+                      <tr class="color">
+                          <th sortable="Référence" class="sortable">
+                              # Référence Fichier 
+                          </th>
+                          <th sortable="Désigniation" class="sortable">
+                              Désigniation
+                          </th>
+                          <th class="st-sort-disable th-dropdown">
+                              Date d'envoie
+                          </th>
+                          <th sortable='total.value' class="sortable">
+                              Document
+                          </th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let doc of Documents" >
+                          <td width="30%" ng-bind="item.code">{{doc.codedoc}}</td>                          
+                          <td ng-bind="item.statusDisplay">{{doc.designation}}</td>
+                          
+                          <td width="30%" ng-bind="item.placed | date:'MM/dd/yyyy'">{{doc.date_upload}}</td>
+                          <td width="30%" ng-bind="item.path"><a href="{{doc.pathfile}}">{{doc.pathfile}}</a> </td>
+                      </tr>
+                      
+                      </tbody>
+                  </table>
+                  <form class="form-inline pull-right margin-bottom-basic">
+                      <div class="form-group">
+                          <grid-pagination max-size="5" boundary-links="true"  class="pagination-sm"  total-items="paginationOptions.totalItems"
+                                           ng-model="paginationOptions.currentPage"
+                                           ng-change="reloadGrid()"
+                                           items-per-page="paginationOptions.itemsPerPage"></grid-pagination>
+                      </div>
+                      <div class="form-group items-per-page">
+                          <label for="itemsOnPageSelect2">Trier par :</label>
+                          <select>
+                              <option>Alphabèt</option>
+                              <option>Date </option>
+                              
+                          </select>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    
+       <!--daminoooooooooooooo-->
+     
+ <!--daminoooooooooooooo-->
+       
+
+
+
+</div>
+  </div>
+ 
+        <!-- /page content -->
+
+        <!-- footer content -->
+     
+        <!-- /footer content -->
+    

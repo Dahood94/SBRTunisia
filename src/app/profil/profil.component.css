@@ -1,0 +1,73 @@
+/* dash */
+
+
+  /** /Dropzone.js **/
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  .color{
+    color: black;
+  }
+  input[type=text]
+  {
+    padding-left:50px;
+  
+  }
+  .font{
+    position: relative;
+  }
+  .font i{
+    position: absolute;
+    left: 5px;
+    top: 11px;
+    padding: 11px 8px ;
+  }
+  .far fa-edit fa-lg{
+    opacity: 5px;
+  }
+  input[type=tel]
+  {
+    padding-left:50px;
+    width: 250px;
+  }
+  input[type=tel].glyphicon-phone-alt{
+   position: relative;
+    padding-bottom: 15px;
+    padding-top: -10px;
+  }
+  .date{
+    width: 250px;
+    text-align: center;
+    position: relative;
+    text-emphasis: none;
+  }
+  i text{
+    position: absolute;
+    left: 5px;
+    top: 11px;
+    padding: 11px 8px ;
+  }
+  .btn-default{
+    color: whitesmoke;
+    size: 20px;
+  
+  }
+  .right_col{
+    margin-left: 20%;
+  }
+  

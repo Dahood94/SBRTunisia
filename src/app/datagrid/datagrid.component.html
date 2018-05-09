@@ -1,0 +1,95 @@
+<body ng-app="myApp" ng-controller="myAppController" ng-cloak>
+   
+  <div class="container">
+      <div class="row">
+           <div class="col-md-4">
+             <div class="form-group">
+                 <label for="orderIdFilter">Search by Order #</label>
+                      <input id="orderIdFilter" type="text" class="form-control order-search-box"
+                             placeholder="Enter Order #"
+                             ng-change="gridActions.filter()"
+                             ng-model="code"
+                             filter-by="code"
+                             filter-type="text">
+              </div>
+              </div>
+              </div>
+      
+      <hr>
+      <div class="text-right">
+          <button class="btn btn-default">Télécharger tous les documents <i
+                  class="fa fa-download"></i></button>
+        
+      </div>
+      <hr>
+      <div class="row">
+          <div class="col-md-12">
+              <div grid-data id='test' grid-options="gridOptions" grid-actions="gridActions">
+                  <div class="row">
+                      <div class="col-md-3">
+                          <span class="items">Tout les Documents</span>
+                      </div>
+                      <div class="col-md-9 text-right">
+                          <form class="form-inline pull-right margin-bottom-basic">
+                              <div class="form-group">
+                                  <grid-pagination max-size="5"
+                                                   boundary-links="true"
+                                                   class="pagination-sm"
+                                                   total-items="paginationOptions.totalItems"
+                                                   ng-model="paginationOptions.currentPage"
+                                                   ng-change="reloadGrid()"
+                                                   items-per-page="paginationOptions.itemsPerPage"></grid-pagination>
+                              </div>
+                             
+                          </form>
+                      </div>
+                  </div>
+                  <table class="table table-bordered table-striped">
+                      <thead>
+                      <tr>
+                          <th sortable="code" class="sortable">
+                                # Référence 
+                          </th>
+                          <th sortable="placed" class="sortable">
+                              Date de chargement
+                          </th>
+                          <th class="st-sort-disable th-dropdown">
+                              Désignation
+                          </th>
+                          <th sortable='total.value' class="sortable">
+                              Documents
+                          </th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr grid-item>
+                          <td width="30%" ng-bind="item.code"></td>
+                          <td width="30%" ng-bind="item.placed | date:'MM/dd/yyyy'"></td>
+                          <td ng-bind="item.statusDisplay"></td>
+                          <td ng-bind="item.total.formattedValue"></td>
+                      </tr>
+                      </tbody>
+                  </table>
+                  <form class="form-inline pull-right margin-bottom-basic">
+                      <div class="form-group">
+                          <grid-pagination max-size="5" boundary-links="true"  class="pagination-sm"  total-items="paginationOptions.totalItems"
+                                           ng-model="paginationOptions.currentPage"
+                                           ng-change="reloadGrid()"
+                                           items-per-page="paginationOptions.itemsPerPage"></grid-pagination>
+                      </div>
+                      <div class="form-group items-per-page">
+                            <label for="itemsOnPageSelect1">Trier par:</label>
+                            <select>
+                                <option>Alphabét</option>
+                                <option>Date de chargement </option>
+                                
+                            </select>
+                        </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    
+    </div>    
+      
+</body>
